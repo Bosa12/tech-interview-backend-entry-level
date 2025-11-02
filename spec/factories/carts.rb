@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :cart do
-    abandoned_at { nil } # Padrão: não abandonado
-  end
+    last_interaction_at { Time.current }
 
-  factory :abandoned_cart, parent: :cart do
-    abandoned_at { 8.days.ago } 
+    after(:create) do |cart|
+      create(:cart_item, cart: cart, quantity: 1, product_id: 1230)
+    end
   end
 end

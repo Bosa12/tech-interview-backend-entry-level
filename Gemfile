@@ -7,7 +7,9 @@ gem "puma", ">= 5.0"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
-gem "bcrypt", "~> 3.1.18"
+gem "bcrypt", "~> 3.1.7"
+
+gem "devise"
 
 gem 'redis', '~> 5.2'
 gem 'sidekiq', '~> 7.2', '>= 7.2.4'

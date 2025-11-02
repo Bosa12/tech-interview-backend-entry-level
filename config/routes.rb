@@ -1,5 +1,7 @@
 require 'sidekiq/web'
 
+
+
 Rails.application.routes.draw do
   resources :products
   post '/cart', to: 'carts#create'
